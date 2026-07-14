@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard · RP Mobiles Inventory Management System</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- checkbox drives the mobile sidebar drawer, no JavaScript needed -->
+<input type="checkbox" id="sidebar-toggle" class="hide">
+
+<div class="app-shell">
+
+  <label for="sidebar-toggle" class="scrim"></label>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">RP</div>
+      <div class="brand-text">
+        <div class="brand-name">RP Mobiles</div>
+        <div class="brand-tag">Inventory System</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Main Menu</div>
+      <a href="dashboard.html" class="active"><span class="material-symbols-outlined nav-ic">space_dashboard</span><span class="nav-label">Dashboard</span></a>
+      <a href="products.html"><span class="material-symbols-outlined nav-ic">inventory_2</span><span class="nav-label">Products</span></a>
+      <a href="low-stock.html"><span class="material-symbols-outlined nav-ic">warning</span><span class="nav-label">Low Stock</span></a>
+      <a href="sales.html"><span class="material-symbols-outlined nav-ic">point_of_sale</span><span class="nav-label">Sales</span></a>
+      <a href="reports.html"><span class="material-symbols-outlined nav-ic">bar_chart</span><span class="nav-label">Reports</span></a>
+      <a href="settings.html"><span class="material-symbols-outlined nav-ic">settings</span><span class="nav-label">Settings</span></a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <a href="login.html"><span class="material-symbols-outlined nav-ic">logout</span><span class="nav-label">Logout</span></a>
+    </div>
+  </aside>
+
+  <div class="main-col">
+
+    <!-- ===================== TOPBAR ===================== -->
+    <header class="topbar">
+      <label for="sidebar-toggle" class="hamburger"><span class="material-symbols-outlined">menu</span></label>
+      <div class="topbar-search">
+        <span class="material-symbols-outlined ic">search</span>
+        <input type="search" placeholder="Search products, sales, brands…">
+      </div>
+      <div class="topbar-right">
+        <button class="icon-pill" type="button" aria-label="Notifications">
+          <span class="material-symbols-outlined">notifications</span><span class="dot"></span>
+        </button>
+        <div class="profile-chip">
+          <div class="avatar">RP</div>
+          <div>
+            <div class="p-name">Admin</div>
+            <div class="p-role">RP Mobiles</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== PAGE BODY ===================== -->
+    <main class="page-body">
+
+      <div class="page-heading">
+        <div>
+          <h1>Dashboard</h1>
+          <div class="crumbs">RP Mobiles <span class="sep">/</span> <span class="cur">Dashboard</span></div>
+        </div>
+        <div class="text-secondary" style="font-size:13px;">Tuesday, 14 July 2026</div>
+      </div>
+
+      <!-- ---- Stat Cards ---- -->
+      <div class="stat-grid">
+        <div class="stat-card accent-green">
+          <div class="stat-top">
+            <div><div class="stat-label">Total Products</div><div class="stat-value">486</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">inventory_2</span></div>
+          </div>
+          <span class="stat-delta up"><span class="material-symbols-outlined" style="font-size:15px;">arrow_upward</span> 12 new this month</span>
+        </div>
+
+        <div class="stat-card accent-blue">
+          <div class="stat-top">
+            <div><div class="stat-label">Total Stock</div><div class="stat-value">6,240</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">warehouse</span></div>
+          </div>
+          <span class="stat-delta up"><span class="material-symbols-outlined" style="font-size:15px;">arrow_upward</span> Units across all categories</span>
+        </div>
+
+        <div class="stat-card accent-green">
+          <div class="stat-top">
+            <div><div class="stat-label">Today's Sales</div><div class="stat-value">₹18,420</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">payments</span></div>
+          </div>
+          <span class="stat-delta up"><span class="material-symbols-outlined" style="font-size:15px;">arrow_upward</span> 42 items sold today</span>
+        </div>
+
+        <div class="stat-card accent-blue">
+          <div class="stat-top">
+            <div><div class="stat-label">Monthly Sales</div><div class="stat-value">₹4.2L</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">calendar_month</span></div>
+          </div>
+          <span class="stat-delta up"><span class="material-symbols-outlined" style="font-size:15px;">arrow_upward</span> 8.4% vs last month</span>
+        </div>
+
+        <div class="stat-card accent-amber">
+          <div class="stat-top">
+            <div><div class="stat-label">Low Stock Items</div><div class="stat-value">18</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">warning</span></div>
+          </div>
+          <span class="stat-delta down"><span class="material-symbols-outlined" style="font-size:15px;">priority_high</span> Needs restocking soon</span>
+        </div>
+
+        <div class="stat-card accent-red">
+          <div class="stat-top">
+            <div><div class="stat-label">Out of Stock</div><div class="stat-value">6</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">remove_shopping_cart</span></div>
+          </div>
+          <span class="stat-delta down"><span class="material-symbols-outlined" style="font-size:15px;">priority_high</span> Reorder recommended</span>
+        </div>
+
+        <div class="stat-card accent-green">
+          <div class="stat-top">
+            <div><div class="stat-label">Revenue (Month)</div><div class="stat-value">₹4.2L</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">account_balance_wallet</span></div>
+          </div>
+          <span class="stat-delta up"><span class="material-symbols-outlined" style="font-size:15px;">arrow_upward</span> On track for target</span>
+        </div>
+
+        <div class="stat-card accent-blue">
+          <div class="stat-top">
+            <div><div class="stat-label">Best Category</div><div class="stat-value mono" style="font-size:20px;">TWS Earbuds</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">headphones</span></div>
+          </div>
+          <span class="stat-delta up"><span class="material-symbols-outlined" style="font-size:15px;">arrow_upward</span> 132 units sold</span>
+        </div>
+      </div>
+
+      <!-- ---- Charts + Activity ---- -->
+      <div class="dash-grid">
+        <div class="card chart-card">
+          <div class="card-head" style="padding:0 0 18px; border:none;">
+            <h3>Sales Overview</h3>
+            <div class="date-filter-tabs">
+              <a href="#" class="active">Week</a><a href="#">Month</a><a href="#">Year</a>
+            </div>
+          </div>
+          <div class="chart-placeholder" role="img" aria-label="Bar chart placeholder showing weekly sales trend">
+            <div class="bar" style="height:38%"></div>
+            <div class="bar" style="height:55%"></div>
+            <div class="bar" style="height:46%"></div>
+            <div class="bar" style="height:70%"></div>
+            <div class="bar" style="height:62%"></div>
+            <div class="bar" style="height:88%"></div>
+            <div class="bar" style="height:74%"></div>
+          </div>
+        </div>
+
+        <div class="card chart-card">
+          <h3 style="margin-bottom:18px;">Stock Health</h3>
+          <div class="donut" role="img" aria-label="Donut chart placeholder showing stock health split">
+            <div class="donut-label"><strong>486</strong><span>Products</span></div>
+          </div>
+          <div class="legend">
+            <div class="legend-item"><span class="dot" style="background:var(--primary)"></span> In Stock — 62%</div>
+            <div class="legend-item"><span class="dot" style="background:var(--warning)"></span> Low Stock — 22%</div>
+            <div class="legend-item"><span class="dot" style="background:var(--danger)"></span> Out of Stock — 16%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- Recent Activity ---- -->
+      <div class="card recent-activity" style="margin-top:20px;">
+        <div class="card-head">
+          <h3>Recent Activity</h3>
+          <a href="sales.html" class="btn btn-ghost btn-sm">View All</a>
+        </div>
+        <div class="card-pad">
+
+          <div class="activity-row">
+            <div class="activity-ic" style="background:var(--primary-tint); color:var(--primary-hover);"><span class="material-symbols-outlined">point_of_sale</span></div>
+            <div>
+              <div class="a-title">Sale recorded — TWS Earbuds (Boat)</div>
+              <div class="a-meta">Qty 3 · ₹2,397 · Product ID TBOA2</div>
+            </div>
+            <div class="a-time">10 min ago</div>
+          </div>
+
+          <div class="activity-row">
+            <div class="activity-ic" style="background:var(--warning-tint); color:#B4740E;"><span class="material-symbols-outlined">warning</span></div>
+            <div>
+              <div class="a-title">Low stock alert — Samsung Tempered Glass</div>
+              <div class="a-meta">Only 4 units remaining · Product ID TSAM1</div>
+            </div>
+            <div class="a-time">42 min ago</div>
+          </div>
+
+          <div class="activity-row">
+            <div class="activity-ic" style="background:var(--info-tint); color:var(--info);"><span class="material-symbols-outlined">add_box</span></div>
+            <div>
+              <div class="a-title">New product added — OnePlus Charging Cable</div>
+              <div class="a-meta">Product ID COPL3 · Stock 50 units</div>
+            </div>
+            <div class="a-time">1 hr ago</div>
+          </div>
+
+          <div class="activity-row">
+            <div class="activity-ic" style="background:var(--danger-tint); color:#C6323A;"><span class="material-symbols-outlined">remove_shopping_cart</span></div>
+            <div>
+              <div class="a-title">Out of stock — Xiaomi Power Bank 10000mAh</div>
+              <div class="a-meta">Product ID PXIA1 · Reorder needed</div>
+            </div>
+            <div class="a-time">3 hrs ago</div>
+          </div>
+
+          <div class="activity-row">
+            <div class="activity-ic" style="background:var(--primary-tint); color:var(--primary-hover);"><span class="material-symbols-outlined">point_of_sale</span></div>
+            <div>
+              <div class="a-title">Sale recorded — Back Cover (Vivo)</div>
+              <div class="a-meta">Qty 5 · ₹1,245 · Product ID BVIV4</div>
+            </div>
+            <div class="a-time">5 hrs ago</div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

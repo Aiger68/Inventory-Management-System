@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings · RP Mobiles Inventory Management System</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<input type="checkbox" id="sidebar-toggle" class="hide">
+
+<div class="app-shell">
+  <label for="sidebar-toggle" class="scrim"></label>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">RP</div>
+      <div class="brand-text">
+        <div class="brand-name">RP Mobiles</div>
+        <div class="brand-tag">Inventory System</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Main Menu</div>
+      <a href="dashboard.html"><span class="material-symbols-outlined nav-ic">space_dashboard</span><span class="nav-label">Dashboard</span></a>
+      <a href="products.html"><span class="material-symbols-outlined nav-ic">inventory_2</span><span class="nav-label">Products</span></a>
+      <a href="low-stock.html"><span class="material-symbols-outlined nav-ic">warning</span><span class="nav-label">Low Stock</span></a>
+      <a href="sales.html"><span class="material-symbols-outlined nav-ic">point_of_sale</span><span class="nav-label">Sales</span></a>
+      <a href="reports.html"><span class="material-symbols-outlined nav-ic">bar_chart</span><span class="nav-label">Reports</span></a>
+      <a href="settings.html" class="active"><span class="material-symbols-outlined nav-ic">settings</span><span class="nav-label">Settings</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      <a href="login.html"><span class="material-symbols-outlined nav-ic">logout</span><span class="nav-label">Logout</span></a>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <label for="sidebar-toggle" class="hamburger"><span class="material-symbols-outlined">menu</span></label>
+      <div class="topbar-search">
+        <span class="material-symbols-outlined ic">search</span>
+        <input type="search" placeholder="Search products, sales, brands…">
+      </div>
+      <div class="topbar-right">
+        <button class="icon-pill" type="button" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span><span class="dot"></span></button>
+        <div class="profile-chip">
+          <div class="avatar">RP</div>
+          <div><div class="p-name">Admin</div><div class="p-role">RP Mobiles</div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-body">
+
+      <div class="page-heading">
+        <div>
+          <h1>Settings</h1>
+          <div class="crumbs">RP Mobiles <span class="sep">/</span> <span class="cur">Settings</span></div>
+        </div>
+      </div>
+
+      <div class="settings-layout">
+
+        <nav class="settings-nav">
+          <a href="#shop-info" class="active"><span class="material-symbols-outlined nav-ic">storefront</span> Shop Information</a>
+          <a href="#profile"><span class="material-symbols-outlined nav-ic">person</span> Profile</a>
+          <a href="#password"><span class="material-symbols-outlined nav-ic">lock</span> Change Password</a>
+          <a href="#theme"><span class="material-symbols-outlined nav-ic">palette</span> Theme</a>
+          <a href="#backup"><span class="material-symbols-outlined nav-ic">cloud_upload</span> Backup</a>
+          <a href="#restore"><span class="material-symbols-outlined nav-ic">restore</span> Restore</a>
+        </nav>
+
+        <div class="settings-panel">
+
+          <!-- Shop Information -->
+          <div class="card card-pad" id="shop-info">
+            <h4>Shop Information</h4>
+            <p class="sub">Details shown across reports and printed receipts.</p>
+            <form action="#">
+              <div class="form-grid">
+                <div class="field"><label for="shop-name">Shop Name</label><input type="text" id="shop-name" value="RP Mobiles"></div>
+                <div class="field"><label for="shop-owner">Owner Name</label><input type="text" id="shop-owner" placeholder="e.g. Ravi Prasad"></div>
+                <div class="field"><label for="shop-phone">Phone Number</label><input type="text" id="shop-phone" placeholder="+91 90000 00000"></div>
+                <div class="field"><label for="shop-email">Email</label><input type="email" id="shop-email" placeholder="rpmobiles@example.com"></div>
+                <div class="field full"><label for="shop-address">Shop Address</label><input type="text" id="shop-address" placeholder="Main Bazaar Road, Coimbatore, Tamil Nadu"></div>
+              </div>
+              <div class="form-actions"><button type="submit" class="btn btn-primary">Save Changes</button></div>
+            </form>
+          </div>
+
+          <!-- Profile -->
+          <div class="card card-pad" id="profile">
+            <h4>Profile</h4>
+            <p class="sub">Your admin account details.</p>
+            <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+              <div class="avatar" style="width:64px; height:64px; font-size:20px;">RP</div>
+              <div>
+                <div style="font-weight:600; font-size:14.5px;">Admin</div>
+                <div class="text-secondary" style="font-size:12.5px;">Store Administrator · RP Mobiles</div>
+              </div>
+              <button class="btn btn-outline btn-sm" type="button" style="margin-left:auto;">Change Photo</button>
+            </div>
+            <div class="form-grid">
+              <div class="field"><label for="admin-name">Full Name</label><input type="text" id="admin-name" value="Admin"></div>
+              <div class="field"><label for="admin-email">Email</label><input type="email" id="admin-email" placeholder="admin@rpmobiles.com"></div>
+            </div>
+            <div class="form-actions"><button type="submit" class="btn btn-primary">Update Profile</button></div>
+          </div>
+
+          <!-- Change Password -->
+          <div class="card card-pad" id="password">
+            <h4>Change Password</h4>
+            <p class="sub">Use a strong password you don't use elsewhere.</p>
+            <form action="#">
+              <div class="form-grid">
+                <div class="field full"><label for="cur-pass">Current Password</label><input type="password" id="cur-pass"></div>
+                <div class="field"><label for="new-pass">New Password</label><input type="password" id="new-pass"></div>
+                <div class="field"><label for="confirm-pass">Confirm New Password</label><input type="password" id="confirm-pass"></div>
+              </div>
+              <div class="form-actions"><button type="submit" class="btn btn-primary">Update Password</button></div>
+            </form>
+          </div>
+
+          <!-- Theme -->
+          <div class="card card-pad" id="theme">
+            <h4>Theme</h4>
+            <p class="sub">Choose the sidebar accent for your dashboard.</p>
+            <div class="theme-swatches">
+              <div class="swatch swatch-forest selected" title="Forest Green (default)"></div>
+              <div class="swatch swatch-charcoal" title="Charcoal"></div>
+              <div class="swatch swatch-navy" title="Navy"></div>
+              <div class="swatch swatch-plum" title="Plum"></div>
+            </div>
+          </div>
+
+          <!-- Backup -->
+          <div class="card card-pad" id="backup">
+            <h4>Backup</h4>
+            <p class="sub">Download a copy of your inventory data.</p>
+            <div class="backup-row">
+              <div><div class="b-title">Full Inventory Backup</div><div class="b-meta">Last backed up: 12 Jul 2026, 9:04 PM</div></div>
+              <button class="btn btn-outline btn-sm" type="button"><span class="material-symbols-outlined btn-icon" style="font-size:16px;">download</span> Download Backup</button>
+            </div>
+            <div class="backup-row">
+              <div><div class="b-title">Sales History Only</div><div class="b-meta">Last backed up: 10 Jul 2026, 6:20 PM</div></div>
+              <button class="btn btn-outline btn-sm" type="button"><span class="material-symbols-outlined btn-icon" style="font-size:16px;">download</span> Download Backup</button>
+            </div>
+          </div>
+
+          <!-- Restore -->
+          <div class="card card-pad" id="restore">
+            <h4>Restore</h4>
+            <p class="sub">Restore your inventory from a previous backup file.</p>
+            <div class="upload-box">
+              <div class="upload-icon"><span class="material-symbols-outlined">restore</span></div>
+              <p style="margin-bottom:4px;"><strong>Click to upload</strong> a backup file</p>
+              <p style="margin:0; font-size:11.5px;">.json or .csv — placeholder only</p>
+            </div>
+            <div class="form-actions"><button type="button" class="btn btn-primary">Restore Data</button></div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

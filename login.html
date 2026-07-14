@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login · RP Mobiles Inventory Management System</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="login-screen">
+
+  <!-- ===================== LEFT: BRAND / ILLUSTRATION ===================== -->
+  <section class="login-showcase">
+    <div class="showcase-brand">
+      <div class="brand-mark">RP</div>
+      <div>
+        <div class="brand-name">RP Mobiles</div>
+        <div class="brand-tag">Inventory Management System</div>
+      </div>
+    </div>
+
+    <div class="showcase-copy">
+      <span class="eyebrow">Mobile Accessories · Retail Suite</span>
+      <h1>One clean dashboard for your entire shop floor.</h1>
+      <p>Track stock, log daily sales, and stay ahead of low‑inventory alerts for every tempered glass, cable and TWS earbud on your shelf.</p>
+
+      <!-- Pure CSS illustration: phone case + earbuds + charging cable -->
+      <div class="accessory-scene" aria-hidden="true">
+        <div class="acc-glow"></div>
+        <div class="acc-cable">
+          <svg viewBox="0 0 180 110" fill="none">
+            <path d="M10 100 C 60 100, 40 20, 100 30 S 170 90, 170 40" stroke="#7FD8A0" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="acc-phone"></div>
+        <div class="acc-earbuds"><i></i><i></i></div>
+      </div>
+    </div>
+
+    <div class="showcase-stats">
+      <div class="stat"><b>1,240+</b><span>SKUs Tracked</span></div>
+      <div class="stat"><b>98.6%</b><span>Stock Accuracy</span></div>
+      <div class="stat"><b>24/7</b><span>Shop Access</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== RIGHT: LOGIN FORM ===================== -->
+  <section class="login-form-panel">
+    <div class="login-form-card">
+
+      <div class="lf-head">
+        <h2>Welcome back, Admin</h2>
+        <p>Sign in to manage RP Mobiles' inventory.</p>
+      </div>
+      <form action="dashboard.html" method="GET">
+        <div class="field">
+          <label for="login-id">Username or Email</label>
+          <input type="text" id="login-id" name="login-id" placeholder="admin@rpmobiles.com" >
+        </div>
+
+        <div class="field">
+          <label for="login-pass">Password</label>
+          <input type="password" id="login-pass" name="login-pass" placeholder="Enter your password" >
+        </div>
+
+        <div class="login-options">
+          <label class="checkbox-row">
+            <input type="checkbox" name="remember">
+            Remember me
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          <span> to Dashboard</span>
+        </button>
+      </form>
+
+      <div class="divider-text">RP MOBILES ADMIN PORTAL</div>
+
+      <p class="login-foot">New to the shop system? <a href="index.html">Learn more about the platform</a></p>
+
+      <div class="demo-note">
+        <b>Phase 1 preview —</b> authentication is UI‑only. In a future backend phase, this form will verify credentials against the shop's admin database.
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

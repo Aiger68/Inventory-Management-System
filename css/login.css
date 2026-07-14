@@ -1,0 +1,119 @@
+/* =============================================================
+   login.css — Split-screen login page
+   ============================================================= */
+
+.login-screen{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns: 1.05fr 1fr;
+}
+
+/* ---------------- Left: brand / illustration panel ---------------- */
+.login-showcase{
+  position:relative;
+  background: radial-gradient(120% 120% at 15% 10%, #1B6B3A 0%, var(--sidebar) 45%, #0D3018 100%);
+  color:#fff;
+  padding: 56px;
+  display:flex; flex-direction:column; justify-content:space-between;
+  overflow:hidden;
+}
+.login-showcase::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity:.5;
+}
+
+.showcase-brand{ display:flex; align-items:center; gap:14px; position:relative; z-index:1; }
+.showcase-brand .brand-mark{ width:48px; height:48px; font-size:17px; }
+.showcase-brand .brand-name{ font-size:17px; font-weight:700; }
+.showcase-brand .brand-tag{ font-size:11.5px; color:#B7DDC3; letter-spacing:.04em; }
+
+.showcase-copy{ position:relative; z-index:1; max-width: 420px; }
+.showcase-copy .eyebrow{
+  display:inline-block; font-size:11.5px; font-weight:600; letter-spacing:.09em;
+  text-transform:uppercase; color:#9BE3B4; background: rgba(34,197,94,0.15);
+  padding: 6px 12px; border-radius:999px; margin-bottom:18px;
+}
+.showcase-copy h1{ color:#fff; font-size: 32px; line-height:1.25; margin-bottom:14px; }
+.showcase-copy p{ color:#CFE6D8; font-size:14.5px; }
+
+/* CSS-built illustration: a phone with a case, earbuds and a charging cable
+   arranged like a small flat-lay — communicates "mobile accessories" without
+   needing an image asset. */
+.accessory-scene{
+  position:relative; z-index:1;
+  height: 230px; margin: 34px 0 8px;
+}
+.acc-phone{
+  position:absolute; left: 40px; bottom:0;
+  width:96px; height:196px; border-radius:20px;
+  background: linear-gradient(160deg,#0F2B1B,#193B26);
+  border: 3px solid #2C5A3D;
+  box-shadow: 0 24px 40px rgba(0,0,0,0.35);
+}
+.acc-phone::before{ content:""; position:absolute; top:14px; left:12px; right:12px; bottom:14px; border-radius:12px; background: linear-gradient(160deg,#1E7A44,#0E3A21); }
+.acc-phone::after{ content:""; position:absolute; top:8px; left:50%; transform:translateX(-50%); width:34px; height:5px; border-radius:4px; background:#0C2415; }
+
+.acc-earbuds{
+  position:absolute; left: 168px; bottom: 40px;
+  width:70px; height:70px;
+}
+.acc-earbuds i{
+  position:absolute; width:26px; height:26px; border-radius:50%;
+  background:#EAF6EE; box-shadow: 0 10px 18px rgba(0,0,0,0.3);
+}
+.acc-earbuds i::after{ content:""; position:absolute; right:-6px; top:8px; width:10px; height:10px; border-radius:50%; background:#22C55E; }
+.acc-earbuds i:nth-child(1){ left:0; top:0; }
+.acc-earbuds i:nth-child(2){ left:32px; top:22px; }
+
+.acc-cable{
+  position:absolute; left:150px; bottom:0; width:180px; height:110px;
+}
+.acc-cable svg{ width:100%; height:100%; }
+
+.acc-glow{
+  position:absolute; width:260px; height:260px; border-radius:50%;
+  background: radial-gradient(circle, rgba(34,197,94,0.35), transparent 70%);
+  left: 10px; bottom:-60px; filter: blur(6px);
+}
+
+.showcase-stats{ display:flex; gap:34px; position:relative; z-index:1; }
+.showcase-stats .stat b{ display:block; font-family: var(--font-mono); font-size:22px; }
+.showcase-stats .stat span{ font-size:11.5px; color:#B7DDC3; }
+
+/* ---------------- Right: form panel ---------------- */
+.login-form-panel{
+  display:flex; align-items:center; justify-content:center;
+  padding: 40px; background: var(--bg);
+}
+.login-form-card{ width:100%; max-width: 380px; }
+.login-form-card .lf-head{ margin-bottom: 30px; }
+.login-form-card .lf-head h2{ font-size:24px; margin-bottom:6px; }
+.login-form-card .lf-head p{ font-size:13.5px; }
+
+.login-form-card .field{ margin-bottom:18px; }
+
+.login-options{
+  display:flex; align-items:center; justify-content:space-between;
+  margin: 4px 0 22px;
+}
+.login-options a{ font-size:13px; color: var(--primary-hover); font-weight:600; }
+.login-options a:hover{ text-decoration:underline; }
+
+.divider-text{
+  display:flex; align-items:center; gap:14px; color: var(--text-secondary);
+  font-size:12px; margin: 22px 0;
+}
+.divider-text::before, .divider-text::after{ content:""; flex:1; height:1px; background: var(--border); }
+
+.login-foot{ text-align:center; font-size:13px; color: var(--text-secondary); margin-top: 10px; }
+.login-foot a{ color: var(--primary-hover); font-weight:600; }
+
+.demo-note{
+  margin-top:22px; font-size:12px; color: var(--text-secondary);
+  background:#fff; border:1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+.demo-note b{ color: var(--text); }

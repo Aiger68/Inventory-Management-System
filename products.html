@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products · RP Mobiles Inventory Management System</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<input type="checkbox" id="sidebar-toggle" class="hide">
+
+<div class="app-shell">
+  <label for="sidebar-toggle" class="scrim"></label>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">RP</div>
+      <div class="brand-text">
+        <div class="brand-name">RP Mobiles</div>
+        <div class="brand-tag">Inventory System</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Main Menu</div>
+      <a href="dashboard.html"><span class="material-symbols-outlined nav-ic">space_dashboard</span><span class="nav-label">Dashboard</span></a>
+      <a href="products.html" class="active"><span class="material-symbols-outlined nav-ic">inventory_2</span><span class="nav-label">Products</span></a>
+      <a href="low-stock.html"><span class="material-symbols-outlined nav-ic">warning</span><span class="nav-label">Low Stock</span></a>
+      <a href="sales.html"><span class="material-symbols-outlined nav-ic">point_of_sale</span><span class="nav-label">Sales</span></a>
+      <a href="reports.html"><span class="material-symbols-outlined nav-ic">bar_chart</span><span class="nav-label">Reports</span></a>
+      <a href="settings.html"><span class="material-symbols-outlined nav-ic">settings</span><span class="nav-label">Settings</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      <a href="login.html"><span class="material-symbols-outlined nav-ic">logout</span><span class="nav-label">Logout</span></a>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <label for="sidebar-toggle" class="hamburger"><span class="material-symbols-outlined">menu</span></label>
+      <div class="topbar-search">
+        <span class="material-symbols-outlined ic">search</span>
+        <input type="search" placeholder="Search products, sales, brands…">
+      </div>
+      <div class="topbar-right">
+        <button class="icon-pill" type="button" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span><span class="dot"></span></button>
+        <div class="profile-chip">
+          <div class="avatar">RP</div>
+          <div><div class="p-name">Admin</div><div class="p-role">RP Mobiles</div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-body">
+
+      <div class="page-heading">
+        <div>
+          <h1>Products</h1>
+          <div class="crumbs">RP Mobiles <span class="sep">/</span> <span class="cur">Products</span></div>
+        </div>
+        <a href="add-product.html" class="btn btn-primary"><span class="material-symbols-outlined btn-icon">add</span> Add Product</a>
+      </div>
+
+      <div class="card">
+        <div class="card-pad" style="padding-bottom:0;">
+          <div class="toolbar">
+            <div class="toolbar-left">
+              <div class="search-input">
+                <span class="material-symbols-outlined ic" style="font-size:18px; color:var(--text-secondary);">search</span>
+                <input type="search" placeholder="Search by product name or ID…">
+              </div>
+              <select class="filter-select">
+                <option>All Categories</option>
+                <option>Tempered Glass</option>
+                <option>Back Cover</option>
+                <option>Charger</option>
+                <option>Charging Cable</option>
+                <option>Neckband</option>
+                <option>TWS Earbuds</option>
+                <option>Bluetooth Speaker</option>
+                <option>Adapter</option>
+                <option>Power Bank</option>
+                <option>Memory Card</option>
+              </select>
+              <select class="filter-select">
+                <option>All Brands</option>
+                <option>Samsung</option><option>Vivo</option><option>Oppo</option><option>Realme</option>
+                <option>Xiaomi</option><option>Apple</option><option>OnePlus</option><option>Motorola</option>
+                <option>Nokia</option><option>Nothing</option>
+              </select>
+            </div>
+            <div class="toolbar-right">
+              <select class="filter-select">
+                <option>Status: All</option>
+                <option>In Stock</option>
+                <option>Low Stock</option>
+                <option>Out of Stock</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th class="num">Purchase Price</th>
+                <th class="num">Selling Price</th>
+                <th class="num">Available Stock</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">TSAM1</td>
+                <td><div class="cell-title">Samsung Tempered Glass</div><div class="cell-sub">Full Coverage · 9H Hardness</div></td>
+                <td>Tempered Glass</td>
+                <td>Samsung</td>
+                <td>Galaxy M14</td>
+                <td class="num">₹35</td>
+                <td class="num">₹79</td>
+                <td class="num">4</td>
+                <td><span class="badge badge-danger">Critical</span></td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="mono">TVIV1</td>
+                <td><div class="cell-title">Vivo Tempered Glass</div><div class="cell-sub">Edge to Edge</div></td>
+                <td>Tempered Glass</td>
+                <td>Vivo</td>
+                <td>V29</td>
+                <td class="num">₹32</td>
+                <td class="num">₹75</td>
+                <td class="num">62</td>
+                <td><span class="badge badge-success">In Stock</span></td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="mono">COPP1</td>
+                <td><div class="cell-title">Oppo Back Cover</div><div class="cell-sub">Matte Silicone, Shockproof</div></td>
+                <td>Back Cover</td>
+                <td>Oppo</td>
+                <td>Reno 11</td>
+                <td class="num">₹60</td>
+                <td class="num">₹149</td>
+                <td class="num">18</td>
+                <td><span class="badge badge-warning">Low Stock</span></td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="mono">CAPL1</td>
+                <td><div class="cell-title">Apple Charger 20W</div><div class="cell-sub">USB‑C Power Adapter</div></td>
+                <td>Charger</td>
+                <td>Apple</td>
+                <td>20W Type‑C</td>
+                <td class="num">₹680</td>
+                <td class="num">₹999</td>
+                <td class="num">0</td>
+                <td><span class="badge badge-neutral">Out of Stock</span></td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="mono">TBOA2</td>
+                <td><div class="cell-title">Boat Airdopes TWS</div><div class="cell-sub">Bluetooth 5.3, ENC Mic</div></td>
+                <td>TWS Earbuds</td>
+                <td>Nothing</td>
+                <td>Ear (a)</td>
+                <td class="num">₹1,450</td>
+                <td class="num">₹1,999</td>
+                <td class="num">27</td>
+                <td><span class="badge badge-success">In Stock</span></td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="mono">PXIA1</td>
+                <td><div class="cell-title">Xiaomi Power Bank 10000mAh</div><div class="cell-sub">18W Fast Charging</div></td>
+                <td>Power Bank</td>
+                <td>Xiaomi</td>
+                <td>Mi Power Bank 3i</td>
+                <td class="num">₹899</td>
+                <td class="num">₹1,299</td>
+                <td class="num">0</td>
+                <td><span class="badge badge-neutral">Out of Stock</span></td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="mono">CMOT1</td>
+                <td><div class="cell-title">Motorola Charging Cable</div><div class="cell-sub">Type‑C, 1m Braided</div></td>
+                <td>Charging Cable</td>
+                <td>Motorola</td>
+                <td>Universal</td>
+                <td class="num">₹95</td>
+                <td class="num">₹199</td>
+                <td class="num">140</td>
+                <td><span class="badge badge-success">In Stock</span></td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="mono">NREA1</td>
+                <td><div class="cell-title">Realme Neckband</div><div class="cell-sub">Magnetic Buds, 12mm Driver</div></td>
+                <td>Neckband</td>
+                <td>Realme</td>
+                <td>Buds Wireless 3</td>
+                <td class="num">₹520</td>
+                <td class="num">₹899</td>
+                <td class="num">9</td>
+                <td><span class="badge badge-warning">Low Stock</span></td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card-pad" style="display:flex; align-items:center; justify-content:space-between; padding-top:16px;">
+          <span class="text-secondary" style="font-size:12.5px;">Showing 8 of 486 products</span>
+          <div style="display:flex; gap:8px;">
+            <button class="icon-btn" type="button" aria-label="Previous page"><span class="material-symbols-outlined" style="font-size:16px;">chevron_left</span></button>
+            <button class="icon-btn" type="button" aria-label="Next page"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span></button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

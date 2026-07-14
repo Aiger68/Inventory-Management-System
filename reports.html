@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports · RP Mobiles Inventory Management System</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<input type="checkbox" id="sidebar-toggle" class="hide">
+
+<div class="app-shell">
+  <label for="sidebar-toggle" class="scrim"></label>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">RP</div>
+      <div class="brand-text">
+        <div class="brand-name">RP Mobiles</div>
+        <div class="brand-tag">Inventory System</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Main Menu</div>
+      <a href="dashboard.html"><span class="material-symbols-outlined nav-ic">space_dashboard</span><span class="nav-label">Dashboard</span></a>
+      <a href="products.html"><span class="material-symbols-outlined nav-ic">inventory_2</span><span class="nav-label">Products</span></a>
+      <a href="low-stock.html"><span class="material-symbols-outlined nav-ic">warning</span><span class="nav-label">Low Stock</span></a>
+      <a href="sales.html"><span class="material-symbols-outlined nav-ic">point_of_sale</span><span class="nav-label">Sales</span></a>
+      <a href="reports.html" class="active"><span class="material-symbols-outlined nav-ic">bar_chart</span><span class="nav-label">Reports</span></a>
+      <a href="settings.html"><span class="material-symbols-outlined nav-ic">settings</span><span class="nav-label">Settings</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      <a href="login.html"><span class="material-symbols-outlined nav-ic">logout</span><span class="nav-label">Logout</span></a>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <label for="sidebar-toggle" class="hamburger"><span class="material-symbols-outlined">menu</span></label>
+      <div class="topbar-search">
+        <span class="material-symbols-outlined ic">search</span>
+        <input type="search" placeholder="Search products, sales, brands…">
+      </div>
+      <div class="topbar-right">
+        <button class="icon-pill" type="button" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span><span class="dot"></span></button>
+        <div class="profile-chip">
+          <div class="avatar">RP</div>
+          <div><div class="p-name">Admin</div><div class="p-role">RP Mobiles</div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-body">
+
+      <div class="page-heading">
+        <div>
+          <h1>Reports</h1>
+          <div class="crumbs">RP Mobiles <span class="sep">/</span> <span class="cur">Reports</span></div>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <button class="btn btn-outline" type="button"><span class="material-symbols-outlined btn-icon">picture_as_pdf</span> Export PDF</button>
+          <button class="btn btn-outline" type="button"><span class="material-symbols-outlined btn-icon">print</span> Print Report</button>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="date-filter-tabs">
+          <a href="#" class="active">Today</a>
+          <a href="#">Yesterday</a>
+          <a href="#">Weekly</a>
+          <a href="#">Monthly</a>
+        </div>
+        <div class="toolbar-right">
+          <div class="field" style="flex-direction:row; align-items:center; gap:10px;">
+            <label style="font-size:13px; margin:0; white-space:nowrap;">Custom range</label>
+            <input type="date" style="padding:9px 12px;">
+            <span class="text-secondary">to</span>
+            <input type="date" style="padding:9px 12px;">
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card accent-green">
+          <div class="stat-top">
+            <div><div class="stat-label">Today's Sales</div><div class="stat-value">₹18,420</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">today</span></div>
+          </div>
+          <span class="stat-delta up">42 items sold</span>
+        </div>
+        <div class="stat-card accent-blue">
+          <div class="stat-top">
+            <div><div class="stat-label">Weekly Sales</div><div class="stat-value">₹96,300</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">date_range</span></div>
+          </div>
+          <span class="stat-delta up">6.1% vs last week</span>
+        </div>
+        <div class="stat-card accent-green">
+          <div class="stat-top">
+            <div><div class="stat-label">Monthly Sales</div><div class="stat-value">₹4.2L</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">calendar_month</span></div>
+          </div>
+          <span class="stat-delta up">8.4% vs last month</span>
+        </div>
+        <div class="stat-card accent-blue">
+          <div class="stat-top">
+            <div><div class="stat-label">Yearly Sales</div><div class="stat-value">₹48.7L</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">insights</span></div>
+          </div>
+          <span class="stat-delta up">On track for target</span>
+        </div>
+      </div>
+
+      <div class="report-charts-grid" style="margin-top:20px;">
+        <div class="card chart-card">
+          <h3 style="margin-bottom:18px;">Revenue Trend</h3>
+          <div class="chart-placeholder" role="img" aria-label="Bar chart placeholder showing revenue trend">
+            <div class="bar" style="height:32%"></div>
+            <div class="bar" style="height:48%"></div>
+            <div class="bar" style="height:40%"></div>
+            <div class="bar" style="height:66%"></div>
+            <div class="bar" style="height:58%"></div>
+            <div class="bar" style="height:82%"></div>
+            <div class="bar" style="height:70%"></div>
+            <div class="bar" style="height:90%"></div>
+            <div class="bar" style="height:76%"></div>
+            <div class="bar" style="height:60%"></div>
+          </div>
+        </div>
+
+        <div class="card chart-card">
+          <h3 style="margin-bottom:18px;">Sales by Category</h3>
+          <div class="donut" role="img" aria-label="Donut chart placeholder showing sales split by category">
+            <div class="donut-label"><strong>₹4.2L</strong><span>This Month</span></div>
+          </div>
+          <div class="legend">
+            <div class="legend-item"><span class="dot" style="background:var(--primary)"></span> TWS Earbuds — 34%</div>
+            <div class="legend-item"><span class="dot" style="background:var(--warning)"></span> Tempered Glass — 28%</div>
+            <div class="legend-item"><span class="dot" style="background:var(--danger)"></span> Others — 38%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-charts-grid" style="margin-top:20px;">
+        <div class="card card-pad">
+          <div class="card-head" style="padding:0 0 12px; border:none;"><h3>Top Selling Products</h3></div>
+          <div class="top-products-list">
+            <div class="rank-row">
+              <div class="rank-badge">01</div>
+              <div><div class="r-name">Boat Airdopes TWS</div><div class="r-meta">TWS Earbuds · Nothing</div></div>
+              <div class="r-value">132 sold</div>
+            </div>
+            <div class="rank-row">
+              <div class="rank-badge">02</div>
+              <div><div class="r-name">Samsung Tempered Glass</div><div class="r-meta">Tempered Glass · Samsung</div></div>
+              <div class="r-value">118 sold</div>
+            </div>
+            <div class="rank-row">
+              <div class="rank-badge">03</div>
+              <div><div class="r-name">Motorola Charging Cable</div><div class="r-meta">Charging Cable · Motorola</div></div>
+              <div class="r-value">96 sold</div>
+            </div>
+            <div class="rank-row">
+              <div class="rank-badge">04</div>
+              <div><div class="r-name">Vivo Back Cover</div><div class="r-meta">Back Cover · Vivo</div></div>
+              <div class="r-value">74 sold</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-pad">
+          <div class="card-head" style="padding:0 0 12px; border:none;"><h3>Least Selling Products</h3></div>
+          <div class="top-products-list">
+            <div class="rank-row least">
+              <div class="rank-badge">01</div>
+              <div><div class="r-name">Nokia Adapter 33W</div><div class="r-meta">Adapter · Nokia</div></div>
+              <div class="r-value">3 sold</div>
+            </div>
+            <div class="rank-row least">
+              <div class="rank-badge">02</div>
+              <div><div class="r-name">Xiaomi Power Bank 10000mAh</div><div class="r-meta">Power Bank · Xiaomi</div></div>
+              <div class="r-value">5 sold</div>
+            </div>
+            <div class="rank-row least">
+              <div class="rank-badge">03</div>
+              <div><div class="r-name">Apple Charger 20W</div><div class="r-meta">Charger · Apple</div></div>
+              <div class="r-value">7 sold</div>
+            </div>
+            <div class="rank-row least">
+              <div class="rank-badge">04</div>
+              <div><div class="r-name">Samsung Memory Card 64GB</div><div class="r-meta">Memory Card · Samsung</div></div>
+              <div class="r-value">9 sold</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

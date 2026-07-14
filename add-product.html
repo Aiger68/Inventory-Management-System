@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Product · RP Mobiles Inventory Management System</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<input type="checkbox" id="sidebar-toggle" class="hide">
+
+<div class="app-shell">
+  <label for="sidebar-toggle" class="scrim"></label>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">RP</div>
+      <div class="brand-text">
+        <div class="brand-name">RP Mobiles</div>
+        <div class="brand-tag">Inventory System</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Main Menu</div>
+      <a href="dashboard.html"><span class="material-symbols-outlined nav-ic">space_dashboard</span><span class="nav-label">Dashboard</span></a>
+      <a href="products.html" class="active"><span class="material-symbols-outlined nav-ic">inventory_2</span><span class="nav-label">Products</span></a>
+      <a href="low-stock.html"><span class="material-symbols-outlined nav-ic">warning</span><span class="nav-label">Low Stock</span></a>
+      <a href="sales.html"><span class="material-symbols-outlined nav-ic">point_of_sale</span><span class="nav-label">Sales</span></a>
+      <a href="reports.html"><span class="material-symbols-outlined nav-ic">bar_chart</span><span class="nav-label">Reports</span></a>
+      <a href="settings.html"><span class="material-symbols-outlined nav-ic">settings</span><span class="nav-label">Settings</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      <a href="login.html"><span class="material-symbols-outlined nav-ic">logout</span><span class="nav-label">Logout</span></a>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <label for="sidebar-toggle" class="hamburger"><span class="material-symbols-outlined">menu</span></label>
+      <div class="topbar-search">
+        <span class="material-symbols-outlined ic">search</span>
+        <input type="search" placeholder="Search products, sales, brands…">
+      </div>
+      <div class="topbar-right">
+        <button class="icon-pill" type="button" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span><span class="dot"></span></button>
+        <div class="profile-chip">
+          <div class="avatar">RP</div>
+          <div><div class="p-name">Admin</div><div class="p-role">RP Mobiles</div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-body">
+
+      <div class="page-heading">
+        <div>
+          <h1>Add Product</h1>
+          <div class="crumbs">RP Mobiles <span class="sep">/</span> <a href="products.html">Products</a> <span class="sep">/</span> <span class="cur">Add Product</span></div>
+        </div>
+      </div>
+
+      <form action="#" method="post">
+        <div class="product-form-layout">
+
+          <!-- ---- Main fields ---- -->
+          <div class="card card-pad">
+            <h3 style="margin-bottom:20px;">Product Details</h3>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="pid">Product ID</label>
+                <input type="text" id="pid" name="pid" placeholder="e.g. TSAM1">
+                <span class="hint">Format: Category Prefix + Brand Prefix + Serial No.</span>
+              </div>
+
+              <div class="field">
+                <label for="pname">Product Name</label>
+                <input type="text" id="pname" name="pname" placeholder="e.g. Samsung Tempered Glass" required>
+              </div>
+
+              <div class="field">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                  <option value="">Select category</option>
+                  <option>Tempered Glass</option>
+                  <option>Back Cover</option>
+                  <option>Charger</option>
+                  <option>Charging Cable</option>
+                  <option>Neckband</option>
+                  <option>TWS Earbuds</option>
+                  <option>Bluetooth Speaker</option>
+                  <option>Adapter</option>
+                  <option>Power Bank</option>
+                  <option>Memory Card</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="brand">Brand</label>
+                <select id="brand" name="brand" required>
+                  <option value="">Select brand</option>
+                  <option>Samsung</option>
+                  <option>Vivo</option>
+                  <option>Oppo</option>
+                  <option>Realme</option>
+                  <option>Xiaomi</option>
+                  <option>Apple</option>
+                  <option>OnePlus</option>
+                  <option>Motorola</option>
+                  <option>Nokia</option>
+                  <option>Nothing</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="model">Model</label>
+                <input type="text" id="model" name="model" placeholder="e.g. Galaxy M14">
+              </div>
+
+              <div class="field">
+                <label for="supplier">Supplier</label>
+                <input type="text" id="supplier" name="supplier" placeholder="e.g. Chennai Mobile Distributors">
+              </div>
+
+              <div class="field">
+                <label for="pprice">Purchase Price (₹)</label>
+                <input type="number" id="pprice" name="pprice" placeholder="0.00" min="0" step="0.01">
+              </div>
+
+              <div class="field">
+                <label for="sprice">Selling Price (₹)</label>
+                <input type="number" id="sprice" name="sprice" placeholder="0.00" min="0" step="0.01">
+              </div>
+
+              <div class="field">
+                <label for="stock">Available Stock Quantity</label>
+                <input type="number" id="stock" name="stock" placeholder="0" min="0">
+              </div>
+
+              <div class="field full">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Short notes about this product — finish, compatibility, warranty, etc."></textarea>
+              </div>
+            </div>
+
+            <div class="note-box" style="margin-top:22px;">
+              <span class="material-symbols-outlined note-icon">info</span>
+              <span>In future phases, Product ID will be generated automatically based on Category Prefix + Brand Prefix + Serial Number. This is only a UI placeholder.</span>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Product</button>
+              <button type="reset" class="btn btn-outline">Reset</button>
+              <a href="products.html" class="btn btn-ghost">Cancel</a>
+            </div>
+          </div>
+
+          <!-- ---- Image + ID reference ---- -->
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <div class="card card-pad">
+              <h3 style="font-size:14.5px; margin-bottom:14px;">Product Image</h3>
+              <div class="upload-box">
+                <div class="upload-icon"><span class="material-symbols-outlined">add_photo_alternate</span></div>
+                <p style="margin-bottom:4px;"><strong>Click to upload</strong> or drag an image here</p>
+                <p style="margin:0; font-size:11.5px;">PNG or JPG, up to 5MB — placeholder only</p>
+              </div>
+            </div>
+
+            <div class="card card-pad">
+              <h3 style="font-size:14.5px; margin-bottom:12px;">Product ID Reference</h3>
+              <p style="font-size:12.5px; margin-bottom:12px;">Examples used across the catalogue:</p>
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <div style="display:flex; justify-content:space-between; font-size:13px;"><span class="mono">TSAM1</span><span class="text-secondary">Tempered Glass · Samsung</span></div>
+                <div style="display:flex; justify-content:space-between; font-size:13px;"><span class="mono">TSAM2</span><span class="text-secondary">Tempered Glass · Samsung</span></div>
+                <div style="display:flex; justify-content:space-between; font-size:13px;"><span class="mono">TVIV1</span><span class="text-secondary">Tempered Glass · Vivo</span></div>
+                <div style="display:flex; justify-content:space-between; font-size:13px;"><span class="mono">COPP1</span><span class="text-secondary">Back Cover · Oppo</span></div>
+                <div style="display:flex; justify-content:space-between; font-size:13px;"><span class="mono">CAPL1</span><span class="text-secondary">Charger · Apple</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

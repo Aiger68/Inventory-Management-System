@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Low Stock · RP Mobiles Inventory Management System</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<input type="checkbox" id="sidebar-toggle" class="hide">
+
+<div class="app-shell">
+  <label for="sidebar-toggle" class="scrim"></label>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">RP</div>
+      <div class="brand-text">
+        <div class="brand-name">RP Mobiles</div>
+        <div class="brand-tag">Inventory System</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Main Menu</div>
+      <a href="dashboard.html"><span class="material-symbols-outlined nav-ic">space_dashboard</span><span class="nav-label">Dashboard</span></a>
+      <a href="products.html"><span class="material-symbols-outlined nav-ic">inventory_2</span><span class="nav-label">Products</span></a>
+      <a href="low-stock.html" class="active"><span class="material-symbols-outlined nav-ic">warning</span><span class="nav-label">Low Stock</span></a>
+      <a href="sales.html"><span class="material-symbols-outlined nav-ic">point_of_sale</span><span class="nav-label">Sales</span></a>
+      <a href="reports.html"><span class="material-symbols-outlined nav-ic">bar_chart</span><span class="nav-label">Reports</span></a>
+      <a href="settings.html"><span class="material-symbols-outlined nav-ic">settings</span><span class="nav-label">Settings</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      <a href="login.html"><span class="material-symbols-outlined nav-ic">logout</span><span class="nav-label">Logout</span></a>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <label for="sidebar-toggle" class="hamburger"><span class="material-symbols-outlined">menu</span></label>
+      <div class="topbar-search">
+        <span class="material-symbols-outlined ic">search</span>
+        <input type="search" placeholder="Search products, sales, brands…">
+      </div>
+      <div class="topbar-right">
+        <button class="icon-pill" type="button" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span><span class="dot"></span></button>
+        <div class="profile-chip">
+          <div class="avatar">RP</div>
+          <div><div class="p-name">Admin</div><div class="p-role">RP Mobiles</div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-body">
+
+      <div class="page-heading">
+        <div>
+          <h1>Low Stock</h1>
+          <div class="crumbs">RP Mobiles <span class="sep">/</span> <span class="cur">Low Stock</span></div>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <button class="btn btn-outline" type="button"><span class="material-symbols-outlined btn-icon">picture_as_pdf</span> Export PDF</button>
+          <button class="btn btn-outline" type="button"><span class="material-symbols-outlined btn-icon">print</span> Print Report</button>
+        </div>
+      </div>
+
+      <div class="stat-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom:24px;">
+        <div class="stat-card accent-amber">
+          <div class="stat-top">
+            <div><div class="stat-label">Low Stock Products</div><div class="stat-value">18</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">trending_down</span></div>
+          </div>
+          <span class="stat-delta down">Below 15 units</span>
+        </div>
+        <div class="stat-card accent-red">
+          <div class="stat-top">
+            <div><div class="stat-label">Out of Stock</div><div class="stat-value">6</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">remove_shopping_cart</span></div>
+          </div>
+          <span class="stat-delta down">Zero units available</span>
+        </div>
+        <div class="stat-card accent-red">
+          <div class="stat-top">
+            <div><div class="stat-label">Critical Stock</div><div class="stat-value">7</div></div>
+            <div class="stat-icon"><span class="material-symbols-outlined">emergency</span></div>
+          </div>
+          <span class="stat-delta down">5 units or fewer</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-pad" style="padding-bottom:0;">
+          <div class="toolbar">
+            <div class="toolbar-left">
+              <select class="filter-select">
+                <option>All Categories</option>
+                <option>Tempered Glass</option>
+                <option>Back Cover</option>
+                <option>Charger</option>
+                <option>Charging Cable</option>
+                <option>Neckband</option>
+                <option>TWS Earbuds</option>
+                <option>Bluetooth Speaker</option>
+                <option>Adapter</option>
+                <option>Power Bank</option>
+                <option>Memory Card</option>
+              </select>
+              <select class="filter-select">
+                <option>All Brands</option>
+                <option>Samsung</option><option>Vivo</option><option>Oppo</option><option>Realme</option>
+                <option>Xiaomi</option><option>Apple</option><option>OnePlus</option><option>Motorola</option>
+                <option>Nokia</option><option>Nothing</option>
+              </select>
+              <select class="filter-select">
+                <option>All Models</option>
+                <option>Galaxy M14</option><option>V29</option><option>Reno 11</option><option>Buds Wireless 3</option>
+              </select>
+            </div>
+            <div class="toolbar-right">
+              <select class="filter-select">
+                <option>Stock Level: All</option>
+                <option>Critical (≤5)</option>
+                <option>Low (6–15)</option>
+                <option>Out of Stock (0)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th class="num">Available Stock</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">TSAM1</td>
+                <td class="cell-title">Samsung Tempered Glass</td>
+                <td>Tempered Glass</td>
+                <td>Samsung</td>
+                <td>Galaxy M14</td>
+                <td class="num">4<div class="stock-level-bar"><span style="width:22%"></span></div></td>
+                <td><span class="badge badge-danger">Critical</span></td>
+              </tr>
+              <tr>
+                <td class="mono">CAPL1</td>
+                <td class="cell-title">Apple Charger 20W</td>
+                <td>Charger</td>
+                <td>Apple</td>
+                <td>20W Type‑C</td>
+                <td class="num">0<div class="stock-level-bar"><span style="width:0%"></span></div></td>
+                <td><span class="badge badge-neutral">Out of Stock</span></td>
+              </tr>
+              <tr>
+                <td class="mono">PXIA1</td>
+                <td class="cell-title">Xiaomi Power Bank 10000mAh</td>
+                <td>Power Bank</td>
+                <td>Xiaomi</td>
+                <td>Mi Power Bank 3i</td>
+                <td class="num">0<div class="stock-level-bar"><span style="width:0%"></span></div></td>
+                <td><span class="badge badge-neutral">Out of Stock</span></td>
+              </tr>
+              <tr>
+                <td class="mono">COPP1</td>
+                <td class="cell-title">Oppo Back Cover</td>
+                <td>Back Cover</td>
+                <td>Oppo</td>
+                <td>Reno 11</td>
+                <td class="num">18<div class="stock-level-bar mid"><span style="width:60%"></span></div></td>
+                <td><span class="badge badge-warning">Low Stock</span></td>
+              </tr>
+              <tr>
+                <td class="mono">NREA1</td>
+                <td class="cell-title">Realme Neckband</td>
+                <td>Neckband</td>
+                <td>Realme</td>
+                <td>Buds Wireless 3</td>
+                <td class="num">9<div class="stock-level-bar mid"><span style="width:45%"></span></div></td>
+                <td><span class="badge badge-warning">Low Stock</span></td>
+              </tr>
+              <tr>
+                <td class="mono">ANOK1</td>
+                <td class="cell-title">Nokia Adapter 33W</td>
+                <td>Adapter</td>
+                <td>Nokia</td>
+                <td>Universal</td>
+                <td class="num">3<div class="stock-level-bar"><span style="width:18%"></span></div></td>
+                <td><span class="badge badge-danger">Critical</span></td>
+              </tr>
+              <tr>
+                <td class="mono">MSAM1</td>
+                <td class="cell-title">Samsung Memory Card 64GB</td>
+                <td>Memory Card</td>
+                <td>Samsung</td>
+                <td>EVO Plus</td>
+                <td class="num">11<div class="stock-level-bar mid"><span style="width:52%"></span></div></td>
+                <td><span class="badge badge-warning">Low Stock</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

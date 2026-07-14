@@ -1,0 +1,86 @@
+/* =============================================================
+   dashboard.css — Page-specific grid layouts for the admin area
+   (dashboard, reports, settings) that build on style.css
+   ============================================================= */
+
+/* ---- Dashboard: main grid ---- */
+.dash-grid{
+  display:grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.recent-activity .card-head .btn-ghost{ font-size:12.5px; }
+
+/* ---- Reports page ---- */
+.report-charts-grid{
+  display:grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+}
+.top-products-list{ display:flex; flex-direction:column; }
+.rank-row{ display:flex; align-items:center; gap:14px; padding:13px 0; border-bottom:1px solid var(--border); }
+.rank-row:last-child{ border-bottom:none; }
+.rank-badge{
+  width:26px; height:26px; border-radius:8px; background: var(--primary-tint); color: var(--primary-hover);
+  font-family: var(--font-mono); font-weight:700; font-size:12px;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.rank-row.least .rank-badge{ background: var(--danger-tint); color:#C6323A; }
+.rank-row .r-name{ font-size:13.6px; font-weight:600; }
+.rank-row .r-meta{ font-size:11.5px; color: var(--text-secondary); }
+.rank-row .r-value{ margin-left:auto; font-family: var(--font-mono); font-weight:600; font-size:13.5px; }
+
+.date-filter-tabs{ display:flex; gap:6px; background:#fff; border:1px solid var(--border); border-radius:10px; padding:4px; }
+.date-filter-tabs a{ padding:8px 14px; font-size:12.8px; font-weight:600; border-radius:7px; color: var(--text-secondary); }
+.date-filter-tabs a.active{ background: var(--primary); color:#fff; }
+
+/* ---- Settings page ---- */
+.settings-layout{ display:grid; grid-template-columns: 260px 1fr; gap:24px; align-items:start; }
+.settings-nav{ display:flex; flex-direction:column; gap:4px; }
+.settings-nav a{
+  padding: 12px 16px; border-radius: var(--radius-sm); font-size:13.8px; font-weight:500;
+  color: var(--text-secondary); border:1px solid transparent;
+}
+.settings-nav a .nav-ic{ margin-right:10px; }
+.settings-nav a:hover{ background:#fff; border-color: var(--border); }
+.settings-nav a.active{ background:#fff; border-color: var(--border); color: var(--primary-hover); box-shadow: var(--shadow-sm); }
+
+.settings-panel{ display:flex; flex-direction:column; gap:20px; }
+.settings-panel .card-pad h4{ font-size:14.5px; margin-bottom:2px; }
+.settings-panel .card-pad .sub{ font-size:12.5px; color: var(--text-secondary); margin-bottom:18px; }
+
+.theme-swatches{ display:flex; gap:14px; }
+.swatch{ width:56px; height:56px; border-radius:12px; border:2px solid transparent; position:relative; cursor:pointer; }
+.swatch.selected{ border-color: var(--text); }
+.swatch.selected::after{ content:"✓"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; }
+.swatch-forest{ background: var(--sidebar); }
+.swatch-charcoal{ background:#1F2937; }
+.swatch-navy{ background:#1E3A5F; }
+.swatch-plum{ background:#4C1D3D; }
+
+.backup-row{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; border-bottom:1px solid var(--border); }
+.backup-row:last-child{ border-bottom:none; }
+.backup-row .b-title{ font-size:13.8px; font-weight:600; }
+.backup-row .b-meta{ font-size:12px; color: var(--text-secondary); }
+
+/* ---- Sales page: future-functionality preview strip ---- */
+.stock-preview{
+  display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  background:#fff; border:1px dashed var(--border); border-radius: var(--radius-sm);
+  padding: 16px 18px;
+}
+.stock-preview .sp-item{ display:flex; flex-direction:column; gap:2px; }
+.stock-preview .sp-item span{ font-size:11.5px; color: var(--text-secondary); }
+.stock-preview .sp-item b{ font-family: var(--font-mono); font-size:16px; }
+.stock-preview .arrow{ color: var(--text-secondary); font-size:18px; }
+.stock-preview .sp-item.result b{ color: var(--primary-hover); }
+
+/* ---- Low stock summary bar ---- */
+.stock-level-bar{ height:6px; border-radius:4px; background:#F1EFE8; overflow:hidden; margin-top:6px; width:90px; }
+.stock-level-bar span{ display:block; height:100%; background: var(--danger); }
+.stock-level-bar.mid span{ background: var(--warning); }
+
+/* ---- Add product form image column ---- */
+.product-form-layout{ display:grid; grid-template-columns: 1fr 300px; gap:24px; align-items:start; }

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales · RP Mobiles Inventory Management System</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<input type="checkbox" id="sidebar-toggle" class="hide">
+
+<div class="app-shell">
+  <label for="sidebar-toggle" class="scrim"></label>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">RP</div>
+      <div class="brand-text">
+        <div class="brand-name">RP Mobiles</div>
+        <div class="brand-tag">Inventory System</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Main Menu</div>
+      <a href="dashboard.html"><span class="material-symbols-outlined nav-ic">space_dashboard</span><span class="nav-label">Dashboard</span></a>
+      <a href="products.html"><span class="material-symbols-outlined nav-ic">inventory_2</span><span class="nav-label">Products</span></a>
+      <a href="low-stock.html"><span class="material-symbols-outlined nav-ic">warning</span><span class="nav-label">Low Stock</span></a>
+      <a href="sales.html" class="active"><span class="material-symbols-outlined nav-ic">point_of_sale</span><span class="nav-label">Sales</span></a>
+      <a href="reports.html"><span class="material-symbols-outlined nav-ic">bar_chart</span><span class="nav-label">Reports</span></a>
+      <a href="settings.html"><span class="material-symbols-outlined nav-ic">settings</span><span class="nav-label">Settings</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      <a href="login.html"><span class="material-symbols-outlined nav-ic">logout</span><span class="nav-label">Logout</span></a>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <label for="sidebar-toggle" class="hamburger"><span class="material-symbols-outlined">menu</span></label>
+      <div class="topbar-search">
+        <span class="material-symbols-outlined ic">search</span>
+        <input type="search" placeholder="Search products, sales, brands…">
+      </div>
+      <div class="topbar-right">
+        <button class="icon-pill" type="button" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span><span class="dot"></span></button>
+        <div class="profile-chip">
+          <div class="avatar">RP</div>
+          <div><div class="p-name">Admin</div><div class="p-role">RP Mobiles</div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-body">
+
+      <div class="page-heading">
+        <div>
+          <h1>Sales</h1>
+          <div class="crumbs">RP Mobiles <span class="sep">/</span> <span class="cur">Sales</span></div>
+        </div>
+        <div class="text-secondary" style="font-size:13px;">Today — Tuesday, 14 July 2026</div>
+      </div>
+
+      <div class="note-box" style="margin-bottom:22px;">
+        <span class="material-symbols-outlined note-icon">info</span>
+        <span>This page records daily product sales only. There is no billing, invoicing, or customer information involved — the shop owner simply logs what was sold.</span>
+      </div>
+
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <div class="search-input">
+            <span class="material-symbols-outlined ic" style="font-size:18px; color:var(--text-secondary);">search</span>
+            <input type="search" placeholder="Search by product name or ID…">
+          </div>
+          <div class="field" style="flex-direction:row; align-items:center; gap:10px;">
+            <label for="filter-date" style="font-size:13px; margin:0; white-space:nowrap;">Filter by date</label>
+            <input type="date" id="filter-date" style="padding:9px 12px;">
+          </div>
+        </div>
+        <div class="toolbar-right">
+          <button class="btn btn-outline" type="button"><span class="material-symbols-outlined btn-icon">print</span> Print Daily Sales</button>
+          <a href="#sales-entry-form" class="btn btn-primary"><span class="material-symbols-outlined btn-icon">add</span> Add Sales Entry</a>
+        </div>
+      </div>
+
+      <!-- ---- Sales Entry Form ---- -->
+      <div class="card card-pad" id="sales-entry-form" style="margin-bottom:24px;">
+        <h3 style="margin-bottom:20px;">New Sales Entry</h3>
+        <form action="#" method="post">
+          <div class="form-grid">
+            <div class="field">
+              <label for="sale-date">Sale Date</label>
+              <input type="date" id="sale-date" name="sale-date" value="2026-07-14">
+            </div>
+            <div class="field">
+              <label for="sale-pid">Product ID</label>
+              <input type="text" id="sale-pid" name="sale-pid" placeholder="e.g. TSAM1">
+            </div>
+            <div class="field">
+              <label for="sale-pname">Product Name</label>
+              <input type="text" id="sale-pname" name="sale-pname" placeholder="e.g. Samsung Tempered Glass">
+            </div>
+            <div class="field">
+              <label for="sale-category">Category</label>
+              <select id="sale-category" name="sale-category">
+                <option value="">Select category</option>
+                <option>Tempered Glass</option>
+                <option>Back Cover</option>
+                <option>Charger</option>
+                <option>Charging Cable</option>
+                <option>Neckband</option>
+                <option>TWS Earbuds</option>
+                <option>Bluetooth Speaker</option>
+                <option>Adapter</option>
+                <option>Power Bank</option>
+                <option>Memory Card</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="sale-brand">Brand</label>
+              <select id="sale-brand" name="sale-brand">
+                <option value="">Select brand</option>
+                <option>Samsung</option><option>Vivo</option><option>Oppo</option><option>Realme</option>
+                <option>Xiaomi</option><option>Apple</option><option>OnePlus</option><option>Motorola</option>
+                <option>Nokia</option><option>Nothing</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="sale-model">Model</label>
+              <input type="text" id="sale-model" name="sale-model" placeholder="e.g. Galaxy M14">
+            </div>
+            <div class="field">
+              <label for="sale-qty">Quantity Sold</label>
+              <input type="number" id="sale-qty" name="sale-qty" min="1" placeholder="0">
+            </div>
+            <div class="field">
+              <label for="sale-price">Selling Price (₹)</label>
+              <input type="number" id="sale-price" name="sale-price" min="0" step="0.01" placeholder="0.00">
+            </div>
+            <div class="field">
+              <label for="sale-total">Total Amount (₹)</label>
+              <input type="text" id="sale-total" name="sale-total" placeholder="Auto‑calculated in future phase" readonly>
+            </div>
+          </div>
+
+          <div class="stock-preview" style="margin-top:20px;">
+            <div class="sp-item"><span>Current Stock</span><b>25</b></div>
+            <span class="arrow material-symbols-outlined">arrow_forward</span>
+            <div class="sp-item"><span>Quantity Sold</span><b>3</b></div>
+            <span class="arrow material-symbols-outlined">arrow_forward</span>
+            <div class="sp-item result"><span>Updated Stock</span><b>22</b></div>
+            <span class="text-secondary" style="font-size:12px; margin-left:auto;">Stock will auto‑update after saving in a future backend phase.</span>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save Sale</button>
+            <button type="reset" class="btn btn-outline">Reset</button>
+            <a href="sales.html" class="btn btn-ghost">Cancel</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- ---- Sales History ---- -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Sales History</h3>
+          <span class="text-secondary" style="font-size:12.5px;">42 entries today</span>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Sale ID</th>
+                <th>Date</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th class="num">Qty Sold</th>
+                <th class="num">Selling Price</th>
+                <th class="num">Total Amount</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">SL-1042</td>
+                <td>14 Jul 2026</td>
+                <td class="mono">TBOA2</td>
+                <td class="cell-title">Boat Airdopes TWS</td>
+                <td>TWS Earbuds</td>
+                <td>Nothing</td>
+                <td>Ear (a)</td>
+                <td class="num">3</td>
+                <td class="num">₹1,999</td>
+                <td class="num">₹5,997</td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="mono">SL-1041</td>
+                <td>14 Jul 2026</td>
+                <td class="mono">BVIV4</td>
+                <td class="cell-title">Vivo Back Cover</td>
+                <td>Back Cover</td>
+                <td>Vivo</td>
+                <td>V29</td>
+                <td class="num">5</td>
+                <td class="num">₹249</td>
+                <td class="num">₹1,245</td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="mono">SL-1040</td>
+                <td>14 Jul 2026</td>
+                <td class="mono">CMOT1</td>
+                <td class="cell-title">Motorola Charging Cable</td>
+                <td>Charging Cable</td>
+                <td>Motorola</td>
+                <td>Universal</td>
+                <td class="num">8</td>
+                <td class="num">₹199</td>
+                <td class="num">₹1,592</td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="mono">SL-1039</td>
+                <td>13 Jul 2026</td>
+                <td class="mono">TVIV1</td>
+                <td class="cell-title">Vivo Tempered Glass</td>
+                <td>Tempered Glass</td>
+                <td>Vivo</td>
+                <td>V29</td>
+                <td class="num">6</td>
+                <td class="num">₹75</td>
+                <td class="num">₹450</td>
+                <td class="row-actions">
+                  <button class="icon-btn" type="button" aria-label="Edit"><span class="material-symbols-outlined" style="font-size:16px;">edit</span></button>
+                  <button class="icon-btn danger" type="button" aria-label="Delete"><span class="material-symbols-outlined" style="font-size:16px;">delete</span></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ---- Printable daily report (hidden on screen, shown on print) ---- -->
+      <div class="print-only card card-pad" style="margin-top:20px;">
+        <h3>RP Mobiles — Daily Sales Report</h3>
+        <p>Date: 14 July 2026</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Date</th><th>Product ID</th><th>Product Name</th><th>Category</th><th>Brand</th><th>Model</th><th>Qty Sold</th><th>Selling Price</th><th>Total Amount</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>14 Jul 2026</td><td>TBOA2</td><td>Boat Airdopes TWS</td><td>TWS Earbuds</td><td>Nothing</td><td>Ear (a)</td><td>3</td><td>₹1,999</td><td>₹5,997</td></tr>
+            <tr><td>14 Jul 2026</td><td>BVIV4</td><td>Vivo Back Cover</td><td>Back Cover</td><td>Vivo</td><td>V29</td><td>5</td><td>₹249</td><td>₹1,245</td></tr>
+            <tr><td>14 Jul 2026</td><td>CMOT1</td><td>Motorola Charging Cable</td><td>Charging Cable</td><td>Motorola</td><td>Universal</td><td>8</td><td>₹199</td><td>₹1,592</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:16px;"><strong>Total Items Sold:</strong> 16 &nbsp; | &nbsp; <strong>Total Revenue:</strong> ₹8,834</p>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
